@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucastech - IA que Aprende com Você</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { animation: { 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;' } } }
+    }
+  </script>
+  <style>
+    @keyframes pulse-slow { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    .delay-1000 { animation-delay: 1s; }
+    .delay-2000 { animation-delay: 2s; }
+    .fade-in { animation: fadeIn 1s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-x-hidden relative">
+  <!-- Background Elements - Bolhas azuis por baixo -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 pointer-events-none">
+    <div class="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 bg-cyan-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+    <div class="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-600/20 rounded-full blur-xl animate-pulse delay-2000"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-blue-900/90 backdrop-blur-sm z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+          <span class="text-xl font-bold drop-shadow-md">LT</span>
+        </div>
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent drop-shadow-lg">
+          LUCASTECH
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="hover:text-blue-300 transition-colors drop-shadow-md">Início</a>
+        <a href="#recursos" class="hover:text-blue-300 transition-colors drop-shadow-md">Recursos</a>
+        <a href="#tecnologia" class="hover:text-blue-300 transition-colors drop-shadow-md">Tecnologia</a>
+        <a href="#contato" class="hover:text-blue-300 transition-colors drop-shadow-md">Contato</a>
+      </nav>
+      <button class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-lg font-semibold transition-colors drop-shadow-md">
+        Experimentar
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="pt-32 pb-20 px-6 relative">
+    <div class="container mx-auto text-center fade-in">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">
+        A <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Inteligência</span> que
+        <span class="block mt-2">Aprende com Você</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-blue-200 mb-8 max-w-3xl mx-auto drop-shadow-md">
+        Nossa IA não apenas executa comandos - ela evolui, adapta-se e cresce com cada interação, 
+        criando uma experiência verdadeiramente única para cada usuário.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 drop-shadow-md">
+          Começar Agora
+        </button>
+        <button class="border border-blue-400 text-blue-300 hover:bg-blue-400/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all drop-shadow-md">
+          Saiba Mais
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="recursos" class="py-20 px-6 bg-blue-950/50">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold text-center mb-16 drop-shadow-lg">
+        <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          Revolução em Aprendizado Contínuo
+        </span>
+      </h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-blue-900/50 p-8 rounded-2xl border border-blue-700/30 hover:border-blue-500/50 transition-all">
+          <div class="w-16 h-16 bg-blue-600 rounded-xl mb-6 flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-semibold mb-4 text-center drop-shadow-md">Memória Adaptativa</h4>
+          <p class="text-blue-200 text-center drop-shadow-md">
+            Nossa IA lembra de cada interação, aprendendo seus padrões e preferências para oferecer 
+            respostas cada vez mais personalizadas e relevantes.
+          </p>
+        </div>
+        <div class="bg-blue-900/50 p-8 rounded-2xl border border-blue-700/30 hover:border-blue-500/50 transition-all">
+          <div class="w-16 h-16 bg-blue-600 rounded-xl mb-6 flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-semibold mb-4 text-center drop-shadow-md">Evolução Coletiva</h4>
+          <p class="text-blue-200 text-center drop-shadow-md">
+            Cada usuário contribui para o crescimento da IA. O que é aprendido com você beneficia 
+            toda a comunidade, criando uma inteligência que evolui exponencialmente.
+          </p>
+        </div>
+        <div class="bg-blue-900/50 p-8 rounded-2xl border border-blue-700/30 hover:border-blue-500/50 transition-all">
+          <div class="w-16 h-16 bg-blue-600 rounded-xl mb-6 flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-semibold mb-4 text-center drop-shadow-md">Aprendizado Contínuo</h4>
+          <p class="text-blue-200 text-center drop-shadow-md">
+            Nossa IA nunca para de aprender. A cada novo dia, ela se torna mais inteligente, 
+            mais rápida e mais precisa, sempre se adaptando às necessidades em constante mudança.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section id="tecnologia" class="py-20 px-6">
+    <div class="container mx-auto">
+      <h3 class="text-4xl font-bold text-center mb-16 drop-shadow-lg">
+        <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          Conheça Nossa Tecnologia
+        </span>
+      </h3>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h4 class="text-3xl font-semibold mb-6 drop-shadow-md">O Cérebro Digital que Cresce com Você</h4>
+          <p class="text-lg text-blue-200 mb-6 drop-shadow-md">
+            Desenvolvemos uma arquitetura neural única que permite à nossa IA não apenas processar informações, 
+            mas verdadeiramente compreender contexto, emoção e intenção. Cada interação é uma oportunidade 
+            de crescimento mútuo.
+          </p>
+          <p class="text-lg text-blue-200 mb-8 drop-shadow-md">
+            Imagine uma inteligência que lembra suas preferências, antecipa suas necessidades e se adapta 
+            ao seu estilo único. Isso é Lucastech - não apenas uma ferramenta, mas um parceiro digital 
+            em constante evolução.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <span class="bg-blue-600/20 px-4 py-2 rounded-full text-blue-300 drop-shadow-md">Aprendizado Profundo</span>
+            <span class="bg-blue-600/20 px-4 py-2 rounded-full text-blue-300 drop-shadow-md">Redes Neurais Adaptativas</span>
+            <span class="bg-blue-600/20 px-4 py-2 rounded-full text-blue-300 drop-shadow-md">Processamento Natural</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-blue-900/30 p-6 rounded-2xl border border-blue-700/20">
+            <img src="https://via.placeholder.com/400x300/1e3a8a/60a5fa?text=Neural+Network" alt="Rede neural futurista" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h5 class="font-semibold text-lg mb-2 drop-shadow-md">Arquitetura Neural</h5>
+            <p class="text-blue-300 text-sm drop-shadow-md">Conexões que evoluem com cada interação</p>
+          </div>
+          <div class="bg-blue-900/30 p-6 rounded-2xl border border-blue-700/20">
+            <img src="https://via.placeholder.com/400x300/1e3a8a/60a5fa?text=AI+Brain" alt="Cérebro de IA" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h5 class="font-semibold text-lg mb-2 drop-shadow-md">Processamento Cognitivo</h5>
+            <p class="text-blue-300 text-sm drop-shadow-md">Pensamento adaptativo em tempo real</p>
+          </div>
+          <div class="bg-blue-900/30 p-6 rounded-2xl border border-blue-700/20">
+            <img src="https://via.placeholder.com/400x300/1e3a8a/60a5fa?text=Hologram" alt="Interface holográfica" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h5 class="font-semibold text-lg mb-2 drop-shadow-md">Evolução Contínua</h5>
+            <p class="text-blue-300 text-sm drop-shadow-md">Crescimento exponencial através da comunidade</p>
+          </div>
+          <div class="bg-blue-900/30 p-6 rounded-2xl border border-blue-700/20">
+            <img src="https://via.placeholder.com/400x300/1e3a8a/60a5fa?text=Data+Network" alt="Rede de dados" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h5 class="font-semibold text-lg mb-2 drop-shadow-md">Rede Colaborativa</h5>
+            <p class="text-blue-300 text-sm drop-shadow-md">Aprendizado coletivo que beneficia todos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6 bg-gradient-to-r from-blue-800 to-cyan-700">
+    <div class="container mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-6 drop-shadow-lg">
+        Pronto para Experimentar o Futuro da Inteligência Artificial?
+      </h3>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto drop-shadow-md">
+        Junte-se à revolução da IA que aprende, adapta-se e evolui com você. 
+        Cada interação é um passo em direção a um futuro mais inteligente.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-blue-800 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 drop-shadow-md">
+          Começar Agora - Grátis
+        </button>
+        <button class="border border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all drop-shadow-md">
+          Agendar Demonstração
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 bg-slate-900">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+              <span class="font-bold drop-shadow-md">LT</span>
+            </div>
+            <h4 class="text-xl font-bold drop-shadow-md">LUCASTECH</h4>
+          </div>
+          <p class="text-blue-300 drop-shadow-md">
+            Revolucionando a maneira como a inteligência artificial aprende e evolui com a humanidade.
+          </p>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-4 drop-shadow-md">Produto</h5>
+          <ul class="space-y-2 text-blue-300">
+            <li><a href="#" class="hover:text-blue-200 drop-shadow-md block">Recursos</a></li>
+            <li><a href="#" class="hover:text-blue-200 drop-shadow-md block">Preços</a></li>
+            <li><a href="#" class="hover:text-blue-200 drop-shadow-md block">API</a></li>
+            <li><a href="#" class="hover:text-blue-200 drop-shadow-md block">Documentação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-4 drop-shadow-md">Empresa</h5>
+          <ul class="space-y-2 text-blue
